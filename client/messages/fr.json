@@ -1,0 +1,70 @@
+{
+	"meta.title": "Traduire le Darija avec précision",
+	"meta.description": "Traduisez le darija marocain avec précision et simplicité.",
+
+	"header": "Traducteur Darija",
+	"footer": "© {year} Traducteur Darija. Construit avec Svelte et Paraglide.",
+
+	"nav.home": "Accueil",
+	"nav.translate": "Traduire",
+	"nav.about": "À propos",
+
+	"darija": "Darija",
+
+	"hero.title": "Traduisez le Darija avec précision",
+	"hero.text": "En vacances au Maroc et besoin d’un traducteur fiable ?\nUtilisez notre outil de traduction Darija.",
+	"hero.cta.primary": "Traduire maintenant",
+	"hero.cta.secondary": "En savoir plus",
+
+	"value.title": "Pourquoi choisir notre traducteur Darija ?",
+	"value.accuracy.title": "Précision",
+	"value.accuracy.text": "Notre traducteur est spécialement entraîné pour le darija, garantissant des traductions fiables.",
+	"value.usability.title": "Facile à utiliser",
+	"value.usability.text": "Interface simple pour des traductions rapides et efficaces.",
+	"value.free.title": "Gratuit",
+	"value.free.text": "Profitez de notre service de traduction sans aucun frais.",
+
+	"examples.title": "Exemples de traductions",
+	"examples.subtitle": "Découvrez comment notre traducteur convertit des phrases courantes de français vers le",
+
+	"examples.example1.en.label": "Français",
+	"examples.example1.en.text": "Salut mec, comment ça va ?",
+	"examples.example1.dj.label": "Darija",
+
+	"examples.example2.en.label": "Français",
+	"examples.example2.en.text": "Excusez-moi, où se trouve le restaurant le plus proche ?",
+	"examples.example2.dj.label": "Darija",
+
+	"cta.title": "Prêt à commencer ?",
+	"cta.text": "Commencez à traduire le Darija instantanément avec notre outil puissant.",
+	"cta.button": "Traduire maintenant",
+
+	"about.title": "À propos de ce projet",
+	"about.paragraph1": "En tant que Marocain, j’ai toujours été passionné par la préservation et le partage de la beauté de la darija — le dialecte qui relie des millions de personnes à leurs racines, leurs familles et leur culture.",
+	"about.paragraph2": "Lorsque j’ai commencé à travailler sur des projets d’entraînement d’IA, j’ai rapidement constaté un manque majeur :",
+	"about.highlight": "il n’existait aucun traducteur de darija gratuit et de qualité disponible en ligne.",
+	"about.paragraph3": "Les rares solutions existantes étaient soit imprécises, soit coûteuses — souvent les deux. C’était frustrant non seulement pour mon travail, mais aussi pour toute personne essayant d’apprendre ou de communiquer en darija.",
+	"about.paragraph4": "J’ai donc décidé de créer le mien. Cet outil est né d’un besoin réel : entraîner des modèles d’IA avec des traductions précises en darija tout en proposant quelque chose d’utile aux voyageurs, aux apprenants et à la diaspora marocaine.",
+	"about.paragraph5": "Mon objectif est simple : rendre la darija accessible à tous. Que vous visitiez le Maroc pour la première fois, que vous renouiez avec vos origines ou que vous soyez simplement curieux, j’espère que ce traducteur aidera à combler ce fossé.",
+	"about.signature": "— Construit avec fierté par un développeur marocain 🇲🇦",
+
+	"translate.title": "Traduire le texte",
+	"translate.input.placeholder": "Entrez le texte à traduire...",
+	"translate.switch": "Inverser",
+	"translate.translate": "Traduire",
+	"translate.translating": "Traduction en cours...",
+	"translate.clear": "Effacer",
+	"translate.result.title": "Résultat de la traduction",
+	"translate.history.title": "Traductions récentes",
+	"translate.history.clear": "Effacer l’historique",
+	"translate.copy": "Copier",
+	"translate.copied": "✓ Copié !",
+
+	"error.loadLanguages": "Échec du chargement des langues",
+	"error.translationFailed": "Échec de la traduction",
+	"error.unexpected.title": "Erreur inattendue",
+	"error.unexpected.message": "Une erreur est survenue. Veuillez réessayer plus tard.",
+	"error.404.title": "Page introuvable",
+	"error.404.message": "Désolé, la page que vous recherchez n’existe pas.",
+	"error.home": "Retour à l’accueil"
+}

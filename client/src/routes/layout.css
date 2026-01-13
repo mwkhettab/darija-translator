@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+
+:root {
+	--font-body: 'Lexend', system-ui, sans-serif;
+	--font-arabic: 'Noto Sans Arabic', serif;
+
+	--moroccan-red: #c1272d;
+	--moroccan-green: #006233;
+
+	--color-text: #2d2d2d;
+	--color-text-light: #666;
+}
+
+body {
+	font-family: var(--font-body);
+	color: var(--color-text);
+	margin: 0;
+}
+
+.ar,
+.ar * {
+	font-family: var(--font-arabic) !important;
+}
+
+.en {
+	font-family: var(--font-body);
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+	color: var(--moroccan-red);
+	margin: 1rem 0;
+}
+
+h2 {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+p {
+	line-height: 1.6;
+}
+
+a {
+	color: var(--moroccan-red);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	color: var(--moroccan-green);
+}
+
+pre {
+	font-size: 1rem;
+	font-family: ui-monospace, SFMono-Regular, monospace;
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	border-left: 4px solid var(--moroccan-red);
+	padding: 1em;
+	overflow-x: auto;
+}
+
+input,
+button {
+	font: inherit;
+}
+
+button {
+	background: var(--moroccan-red);
+	color: #fff;
+	border: none;
+	padding: 0.75rem 2rem;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	transition:
+		background-color 0.3s ease,
+		transform 0.2s ease;
+}
+
+button:hover {
+	background: var(--moroccan-green);
+	transform: translateY(-1px);
+}
+
+button:active {
+	transform: translateY(0);
+}
+
+button:focus-visible {
+	outline: 2px solid var(--moroccan-green);
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+}

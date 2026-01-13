@@ -1,0 +1,70 @@
+{
+	"meta.title": "Accurately Translate Darija",
+	"meta.description": "Translate Moroccan Darija accurately and effortlessly.",
+
+	"header": "Darija Translator",
+	"footer": "© {year} Darija Translator. Built with Svelte and Paraglide.",
+
+	"nav.home": "Home",
+	"nav.translate": "Translate",
+	"nav.about": "About",
+
+	"darija": "Darija",
+
+	"hero.title": "Accurately Translate Darija",
+	"hero.text": "On vacation in Morocco and need an accurate translator?\nUse our Darija Translation tool.",
+	"hero.cta.primary": "Translate Now",
+	"hero.cta.secondary": "Learn More",
+
+	"value.title": "Why Choose Our Darija Translator?",
+	"value.accuracy.title": "Accuracy",
+	"value.accuracy.text": "Our translator is fine-tuned for Darija, ensuring precise translations.",
+	"value.usability.title": "User-Friendly",
+	"value.usability.text": "Simple interface for quick and easy translations.",
+	"value.free.title": "Free to Use",
+	"value.free.text": "Enjoy our translation services at no cost.",
+
+	"examples.title": "Example Translations",
+	"examples.subtitle": "See how our translator converts common phrases from English to",
+
+	"examples.example1.en.label": "English",
+	"examples.example1.en.text": "Hey bro, how's it going?",
+	"examples.example1.dj.label": "Darija",
+
+	"examples.example2.en.label": "English",
+	"examples.example2.en.text": "Excuse me, where is the nearest restaurant?",
+	"examples.example2.dj.label": "Darija",
+
+	"cta.title": "Ready to Get Started?",
+	"cta.text": "Start translating Darija instantly with our powerful tool.",
+	"cta.button": "Translate Now",
+
+	"about.title": "About This Project",
+	"about.paragraph1": "As a Moroccan, I've always been passionate about preserving and sharing the beauty of Darija—the dialect that connects millions of us to our roots, our families, and our culture.",
+	"about.paragraph2": "When I started working on AI training projects, I quickly realized there was a major gap:",
+	"about.highlight": "there were no quality, free Darija translators available online.",
+	"about.paragraph3": "The few that existed were either inaccurate, expensive, or both. This was frustrating not just for my work, but for anyone trying to learn or communicate in Darija.",
+	"about.paragraph4": "So I decided to build my own. This tool was born out of necessity—a way to train AI models with accurate Darija translations while also creating something useful for travelers, language learners, and the Moroccan diaspora.",
+	"about.paragraph5": "My goal is simple: make Darija more accessible to everyone. Whether you're visiting Morocco for the first time, reconnecting with your heritage, or just curious about the language, I hope this translator helps bridge the gap.",
+	"about.signature": "— Built with pride by a Moroccan developer 🇲🇦",
+
+	"translate.title": "Translate Text",
+	"translate.input.placeholder": "Enter text to translate...",
+	"translate.switch": "Switch",
+	"translate.translate": "Translate",
+	"translate.translating": "Translating...",
+	"translate.clear": "Clear",
+	"translate.result.title": "Translation Result",
+	"translate.history.title": "Recent Translations",
+	"translate.history.clear": "Clear History",
+	"translate.copy": "Copy",
+	"translate.copied": "✓ Copied!",
+
+	"error.loadLanguages": "Failed to load languages",
+	"error.translationFailed": "Translation failed",
+	"error.unexpected.title": "Unexpected Error",
+	"error.unexpected.message": "Something went wrong. Please try again later.",
+	"error.404.title": "Page Not Found",
+	"error.404.message": "Sorry, the page you are looking for does not exist.",
+	"error.home": "Go to Home"
+}
