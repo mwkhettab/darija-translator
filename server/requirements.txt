@@ -1,0 +1,9 @@
+colorama==0.4.6
+fastapi==0.128.0
+fastapi_limiter==0.1.6
+openai==2.15.0
+pydantic==2.12.5
+pydantic_settings==2.12.0
+redis==7.1.0
+torch==2.9.1
+transformers==4.57.3
