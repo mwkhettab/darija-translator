@@ -4,7 +4,6 @@ from pydantic import AnyUrl
 
 class Settings(BaseSettings):
     openai_api_key: str
-    hf_token: str
     redis_url: AnyUrl
     cors_allowed_origins: AnyUrl
     d2e_model_id: str = "mwkhettab/nllb-200-darjia-en"
