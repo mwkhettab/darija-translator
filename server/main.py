@@ -41,34 +41,37 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    os.environ["TOKENIZERS_PARALLELISM"] = "false"
-    setup_logging(settings.environment)
+    try:
+        os.environ["TOKENIZERS_PARALLELISM"] = "false"
+        setup_logging(settings.environment)
 
-    logging.info("Initializing models...")
-    init_models()
+        logging.info("Initializing models...")
+        init_models()
 
-    logging.info("Creating FastAPI app...")
-    app = FastAPI(
-        title="Darija Translator API",
-        lifespan=lifespan,
-    )
+        logging.info("Creating FastAPI app...")
+        app = FastAPI(
+            title="Darija Translator API",
+            lifespan=lifespan,
+        )
 
-    app.add_exception_handler(Exception, exception_handler)
+        app.add_exception_handler(Exception, exception_handler)
 
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=[str(settings.cors_allowed_origins)[:-1]],
-        allow_methods=["*"],
-    )
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=[str(settings.cors_allowed_origins)[:-1]],
+            allow_methods=["*"],
+        )
 
-    app.middleware("http")(request_logger)
+        app.middleware("http")(request_logger)
 
-    app.include_router(health_router, prefix="/api")
-    app.include_router(languages_router, prefix="/api")
-    app.include_router(translate_router, prefix="/api")
+        app.include_router(health_router, prefix="/api")
+        app.include_router(languages_router, prefix="/api")
+        app.include_router(translate_router, prefix="/api")
 
-    logging.info("FastAPI app is ready.")
-    return app
-
+        logging.info("FastAPI app is ready.")
+        return app
+    except Exception as e:
+        logging.critical("Failed to create FastAPI app.", exc_info=e)
+        raise
 
 app = create_app()
