@@ -1,12 +1,14 @@
 # Darija Translator 🇲🇦
 
-A free, open-source Darija (Moroccan Arabic) translation app supporting 27 languages. The system combines a fine-tuned Darija model with high-quality multilingual models to deliver accurate translations for real, informal Darija.
+A free, open-source Darija (Moroccan Arabic) translation app supporting 20+ languages. The system combines a fine-tuned Darija model with high-quality multilingual models to deliver accurate translations for real, informal Darija.
+
+Try it [here.](https://darija-translator.vercel.app)
 
 ---
 
 ## Features
 
-- 🌍 **27 Languages** – Translate to/from Darija and major world languages  
+- 🌍 **Multiple Languages** – Translate to/from Darija and major world languages  
 **🔁 Model-Aware Pipeline** – Uses a Darija-specific model for Moroccan Arabic and multilingual models for other languages
 - 🧠 **Custom Darija Model** – Fine-tuned specifically on real Darija data  
 - 🖥 **Multilingual UI** – English, French, Arabic  
