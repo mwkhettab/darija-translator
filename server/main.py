@@ -62,7 +62,7 @@ def create_app() -> FastAPI:
 
         app.add_middleware(
             CORSMiddleware,
-            allow_origins=[origin.strip() for origin in str(settings.cors_allowed_origins).split(",")],
+            allow_origins= [origin.strip() for origin in settings.cors_allowed_origins.split(",")],
             allow_methods=["*"],
         )
 
