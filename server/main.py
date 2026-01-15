@@ -1,4 +1,5 @@
 import os
+import logging
 from contextlib import asynccontextmanager
 
 import redis.asyncio as redis
@@ -18,7 +19,6 @@ from middleware.request_logger import request_logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    init_models()
     redis_client = None
 
     try:
@@ -29,7 +29,6 @@ async def lifespan(app: FastAPI):
         )
         await FastAPILimiter.init(redis_client)
     except Exception as exc:
-        import logging
 
         logging.warning("Redis unavailable, API will return 500", exc_info=exc)
 
@@ -37,15 +36,18 @@ async def lifespan(app: FastAPI):
 
     if redis_client:
         await redis_client.close()
-    
+
     logging.info("Lifespan complete.")
-                
 
 
 def create_app() -> FastAPI:
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
     setup_logging(settings.environment)
 
+    logging.info("Initializing models...")
+    init_models()
+
+    logging.info("Creating FastAPI app...")
     app = FastAPI(
         title="Darija Translator API",
         lifespan=lifespan,
@@ -65,6 +67,7 @@ def create_app() -> FastAPI:
     app.include_router(languages_router, prefix="/api")
     app.include_router(translate_router, prefix="/api")
 
+    logging.info("FastAPI app is ready.")
     return app
 
 

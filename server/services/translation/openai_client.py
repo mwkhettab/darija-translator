@@ -31,7 +31,6 @@ def translate(
     source_text: str,
     english_reference: str = "",
 ) -> str:
-    print(source_language, target_language, source_text, english_reference)
     source_language_name = get_language_name(lang_code=source_language)
     target_language_name = get_language_name(lang_code=target_language)
     prompt = f"""
@@ -75,6 +74,5 @@ ENGLISH REFERENCE (NON-AUTHORITATIVE, FOR DISAMBIGUATION ONLY):
         max_output_tokens=400,
         input=prompt,
     )
-    print(response.output_text)
-    print(response)
+
     return response.output_text.strip()
