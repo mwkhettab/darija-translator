@@ -20,6 +20,9 @@ from middleware.request_logger import request_logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    
+    init_models()
+    
     redis_client = None
 
     try:
@@ -31,11 +34,6 @@ async def lifespan(app: FastAPI):
         await FastAPILimiter.init(redis_client)
     except Exception as exc:
         logging.warning("Redis unavailable, API will return 500", exc_info=exc)
-
-    loop = asyncio.get_event_loop()
-    logging.info("Initializing translation models asynchronously...")
-    await loop.run_in_executor(None, init_models)
-    logging.info("Models initialized.")
 
     yield
 
