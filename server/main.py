@@ -1,6 +1,7 @@
 import os
 import logging
 from contextlib import asynccontextmanager
+import asyncio
 
 import redis.asyncio as redis
 from fastapi import FastAPI
@@ -29,8 +30,12 @@ async def lifespan(app: FastAPI):
         )
         await FastAPILimiter.init(redis_client)
     except Exception as exc:
-
         logging.warning("Redis unavailable, API will return 500", exc_info=exc)
+
+    loop = asyncio.get_event_loop()
+    logging.info("Initializing translation models asynchronously...")
+    await loop.run_in_executor(None, init_models)
+    logging.info("Models initialized.")
 
     yield
 
@@ -44,9 +49,6 @@ def create_app() -> FastAPI:
     try:
         os.environ["TOKENIZERS_PARALLELISM"] = "false"
         setup_logging(settings.environment)
-
-        logging.info("Initializing models...")
-        init_models()
 
         logging.info("Creating FastAPI app...")
         app = FastAPI(
@@ -73,5 +75,6 @@ def create_app() -> FastAPI:
     except Exception as e:
         logging.critical("Failed to create FastAPI app.", exc_info=e)
         raise
+
 
 app = create_app()

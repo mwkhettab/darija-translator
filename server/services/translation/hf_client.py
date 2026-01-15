@@ -53,7 +53,7 @@ def init_models() -> None:
 
 def translate_darija_to_english(text: str) -> str:
     if d2e_model is None:
-        raise RuntimeError("Models not initialized. Call init_models() at startup.")
+        raise RuntimeError("Models not initialized.")
 
     inputs = d2e_tokenizer(
         text,
@@ -79,7 +79,7 @@ def translate_darija_to_english(text: str) -> str:
 
 def translate_english_to_darija(text: str) -> str:
     if e2d_model is None:
-        raise RuntimeError("Models not initialized. Call init_models() at startup.")
+        raise RuntimeError("Models not initialized.")
 
     inputs = e2d_tokenizer(
         text,
