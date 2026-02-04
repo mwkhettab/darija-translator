@@ -2,7 +2,7 @@ from typing import Final, Literal
 
 LANGUAGES: Final[dict[str, dict[str, str]]] = {
     "ary": {"en": "Darija", "fr": "Darija", "ar": "الدارجة"},
-    "eng": {"en": "English", "fr": "Anglais", "ar": "الإنجليزية"},
+    "en": {"en": "English", "fr": "Anglais", "ar": "الإنجليزية"},
     "fra": {"en": "French", "fr": "Français", "ar": "الفرنسية"},
     "arb": {"en": "Arabic", "fr": "Arabe", "ar": "العربية"},
     "spa": {"en": "Spanish", "fr": "Espagnol", "ar": "الإسبانية"},
