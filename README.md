@@ -72,6 +72,7 @@ Where can I find a restaurant? I'm really hungry.
 
 fin n9dr nl9a ristoura? ana jou3an bzaf
 
+If you want a lightweight preprocessing layer before translation, [darija-tools](https://github.com/Samielakkad/darija-tools) covers Moroccan Darija normalization and rule-based Arabizi → Arabic transliteration.
 
 ---
 
