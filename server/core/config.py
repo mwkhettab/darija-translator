@@ -1,10 +1,9 @@
 from pydantic_settings import BaseSettings
-from pydantic import AnyUrl
 
 
 class Settings(BaseSettings):
     openai_api_key: str
-    redis_url: AnyUrl
+    redis_password: str
     cors_allowed_origins: str
     d2e_model_id: str = "mwkhettab/nllb-200-darjia-en"
     e2d_model_id: str = "mwkhettab/nllb-200-en-darija"

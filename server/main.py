@@ -21,22 +21,25 @@ from middleware.request_logger import request_logger
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logging.info("Starting app...")
-    
-    logging.info("Initializing models...")
-    init_models()
-    
+
     logging.info("Setting up Redis for rate limiting...")
-    redis_client = None
 
     try:
         redis_client = redis.from_url(
-            str(settings.redis_url),
+            str("redis://:" + settings.redis_password + "@redis:6379"),
             encoding="utf-8",
             decode_responses=True,
         )
         await FastAPILimiter.init(redis_client)
     except Exception as exc:
-        logging.warning("Redis unavailable, API will return 500", exc_info=exc)
+        logging.warning("Redis unavailable, API will return 500: %s", exc)
+
+    logging.info(
+        "Initializing models... This may take a while if running for the first time."
+    )
+    init_models()
+
+    redis_client = None
 
     logging.info("App started.")
     yield
@@ -62,7 +65,9 @@ def create_app() -> FastAPI:
 
         app.add_middleware(
             CORSMiddleware,
-            allow_origins= [origin.strip() for origin in settings.cors_allowed_origins.split(",")],
+            allow_origins=[
+                origin.strip() for origin in settings.cors_allowed_origins.split(",")
+            ],
             allow_methods=["*"],
         )
 
