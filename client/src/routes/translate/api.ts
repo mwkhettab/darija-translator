@@ -1,14 +1,14 @@
 import type { TranslateResponse } from './types';
 import { PUBLIC_API_BASE_URL } from '$env/static/public';
 
-const API_BASE_URL = import.meta.env.PROD ? PUBLIC_API_BASE_URL : 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.PROD ? PUBLIC_API_BASE_URL : 'http://localhost:8000';
 
 export async function translateText(
 	text: string,
 	sourceLang: string,
 	targetLang: string
 ): Promise<string> {
-	const res = await fetch(`${API_BASE_URL}/translate`, {
+	const res = await fetch(`${API_BASE_URL}api/translate`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export async function translateText(
 }
 
 export async function getSupportedLanguages() {
-	const res = await fetch(`${API_BASE_URL}/languages`);
+	const res = await fetch(`${API_BASE_URL}api/languages`);
 	if (!res.ok) {
 		throw new Error('Failed to fetch languages');
 	}
